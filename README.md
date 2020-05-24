@@ -27,7 +27,7 @@ The implementation (impl.py) was made for Windows OS. An implementation for Linu
 
 The algorithm that generates puzzles can definitely be improved upon.
 
-The arrow somehow doesn't disappear from the canvas, despite using hideturtle() and ht()
+The arrow somehow doesn't disappear from the canvas, hence the exported PDF as well, despite using hideturtle() and ht(). This should be fixed.
 
 For composite numbers, the third Sudoku rule can be implemented with rectangles instead of squares.
 
