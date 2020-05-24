@@ -24,6 +24,11 @@ The StackExchange community was also very helpful in solving a few technical hic
 
 ## Future development
 The implementation (impl.py) was made for Windows OS. An implementation for Linux (Ubuntu) will be coming soon.
+
 The algorithm that generates puzzles can definitely be improved upon.
+
 The arrow somehow doesn't disappear from the canvas, despite using hideturtle() and ht()
+
+For composite numbers, the third Sudoku rule can be implemented with rectangles instead of squares.
+
 One can imagine a gazillion other enhancements and functinalities.
