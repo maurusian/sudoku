@@ -14,7 +14,7 @@ to PDF has been added.
 ## Requirements
 - Python 3 or above
 - NumPy
-- Ghostscript (to convert PS files to PDF)
+- Ghostscript installed (to convert PS files to PDF). Download here: https://www.ghostscript.com/download/gsdnld.html
 
 ## Inpiration
 The algorithm for solving the puzzle (solve() function) was mainly taken from this Computerphile video (Python Sudoku Solver - Computerphile): 
