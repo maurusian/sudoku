@@ -16,7 +16,7 @@ to PDF has been added.
 - NumPy
 - Ghostscript installed (to convert PS files to PDF). Download here: https://www.ghostscript.com/download/gsdnld.html
 
-## Inpiration
+## Inspiration
 The algorithm for solving the puzzle (solve() function) was mainly taken from this Computerphile video (Python Sudoku Solver - Computerphile): 
 https://www.youtube.com/watch?v=G_UYXzGuqvM
 
