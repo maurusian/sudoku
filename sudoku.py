@@ -52,12 +52,40 @@ class Sudoku():
         otherwise.
         """
         size = self.get_board_size()
-        sq   = floor(sqrt(size))
+        sq   = int(floor(sqrt(size)))
 
         if sq**2 == size:
             return sq
         else:
             return 0
+
+    def is_composite(self):
+        """
+        Tests if the the board size is a composite
+        number.
+
+        Calculates the two components with the
+        smallest difference. For a given side of
+        the board n, k and h that satisfy:
+        - k*h = n
+        - abs(k-h) is the smallest possible value
+        the function would return min(h,k).
+
+        For prime numbers, the function returns 0.
+        """
+
+        size = self.get_board_size()
+        sq   = int(floor(sqrt(size)))
+        x = 1
+        for k in range(2,sq+1):
+            if size%k == 0:
+                x = k
+
+        if x==1:
+            return 0
+
+        return x
+        
 
     def get_board_size(self):
         """
@@ -85,6 +113,7 @@ class Sudoku():
         - False: otherwise
         """
         size = self.get_board_size()
+        
         if x < 0 or x > size:
             return False
         for e in range(size):
@@ -98,11 +127,23 @@ class Sudoku():
         #is only enabled for board sizes that
         #are perfect squares, e.g. 4, 9, 16, etc
         sq = self.is_perf_square_board()
+        co = self.is_composite()
         if sq!=0:
             posi = (i//sq)*sq
             posj = (j//sq)*sq
             for e in range(posi,posi+sq):
                 for f in range(posj,posj+sq):
+                    if self.board[e,f]==x:
+                        return False
+        #the rule of checking the sub-rectangles
+        #is only enabled for board sizes that
+        #are composite numbers
+        elif co!=0:
+            mp = size//co
+            posi = (i//co)*co
+            posj = (j//mp)*mp
+            for e in range(posi,posi+co):
+                for f in range(posj,posj+mp):
                     if self.board[e,f]==x:
                         return False
 
@@ -227,15 +268,19 @@ if __name__=='__main__':
     Test implementation for Sudoku class
     and its functionalities.
     """
-    sudoku = Sudoku(matrix(([0,1,4,0],
-                            [0,3,0,0],
-                            [0,0,2,1],
-                            [0,0,0,0])))
+    sudoku = Sudoku(matrix(([0,1,4,0,1,4],
+                            [0,3,0,0,1,4],
+                            [0,0,2,1,1,4],
+                            [0,0,0,0,1,4],
+                            [0,0,0,0,1,4],
+                            [0,0,0,0,1,4])))
 
     #print(sudoku)
     #sudoku.solve()
     #print(sudoku.solutions)
     #print(sudoku.solve())
     #print(sudoku.number_fits(2,1,3))
-    sudoku.build_random_game(9)
+    #sudoku.build_random_game(6)
+    #sudoku.build_random_board(12)
+    #print(sudoku.is_composite())
     

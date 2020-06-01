@@ -15,7 +15,7 @@ if __name__ == '__main__':
     - If the conversion fails an error is printed.
     """
     sudoku = Sudoku(None)
-    sudoku.build_random_game(9)
+    sudoku.build_random_game(6)
     
     drawing = Drawing(sudoku.board.tolist())
     filename = drawing.draw_sudoku('')
