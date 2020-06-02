@@ -4,7 +4,7 @@ Written by Maurusian, in Python 3.6.0
 
 ## Overview
 This program implements a backtracking algorithm to solve Sudoku puzzles, and also to generate random Sudoku puzzles of any desired size.
-Obviously, the larger the size of the puzzle, the more time it will take to solve or generate. The full rules of Sudoku are impemented if the board size is a perfect square. For composite numbers, the third Sudoku rule is implemented with rectangles instead of squares, by choosing a rectangle of sides a and b, such that a*b = the size of the board, and if a is the smallest of a and b, a will be counted on rows, while b will be counted on columns. For board sizes that are prime numbers, only rows and columns are checked.
+Obviously, the larger the size of the puzzle, the more time it will take to solve or generate. The full rules of Sudoku are impemented if the board size is a perfect square. For composite numbers, the third Sudoku rule is implemented with rectangles instead of squares, by choosing a rectangle of sides a and b, such that a x b = the size of the board, and if a is the smallest of a and b, a will be counted on rows, while b will be counted on columns. For board sizes that are prime numbers, only rows and columns are checked.
 
 Generated puzzles must evidently have a single solution to be valid. Once a puzzle is created, it can be drawn on canvas, and exported
 as a Postscript file. This file can then be converted to another format (image, PDF, etc). An implementation where the puzzle is exported
