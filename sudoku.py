@@ -261,6 +261,28 @@ class Sudoku():
         print('Sudoku game generated:')
         print(self)
 
+    def save_board(self,filename):
+        pass
+
+    def encrypt(self):
+        pass
+
+    def decrypt(self):
+        pass
+
+    def hash_board(self):
+        pass
+
+    #may not be needed
+    def dehash(self):
+        pass
+
+    def compare(self, sudoku):
+        pass
+
+    def load_board(self,filename):
+        pass
+    
 
 
 if __name__=='__main__':
@@ -268,12 +290,7 @@ if __name__=='__main__':
     Test implementation for Sudoku class
     and its functionalities.
     """
-    sudoku = Sudoku(matrix(([0,1,4,0,1,4],
-                            [0,3,0,0,1,4],
-                            [0,0,2,1,1,4],
-                            [0,0,0,0,1,4],
-                            [0,0,0,0,1,4],
-                            [0,0,0,0,1,4])))
+    sudoku = Sudoku(None)
 
     #print(sudoku)
     #sudoku.solve()
